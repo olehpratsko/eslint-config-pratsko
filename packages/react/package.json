@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-pratsko-react",
+  "version": "1.0.0",
+  "description": "Global react eslint rules",
+  "main": "index.js",
+  "repository": "olehpratsko/eslint-config-pratsko",
+  "keywords": [
+    "eslint",
+    "lint",
+    "config"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-pratsko": "^1.0.0"
+  },
+  "peerDependencies": {
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

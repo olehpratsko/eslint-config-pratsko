@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-pratsko",
+  "version": "1.0.0",
+  "description": "Global eslint rules",
+  "main": "index.js",
+  "repository": "olehpratsko/eslint-config-pratsko",
+  "keywords": [
+    "eslint",
+    "lint",
+    "config"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}

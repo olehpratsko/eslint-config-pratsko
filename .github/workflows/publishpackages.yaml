@@ -1,0 +1,29 @@
+name: Publish Packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Create release and publish
+    if: github.repository == 'olehpratsko/eslint-config-pratsko'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+      - name: Install node dependencies
+        run: npm ci
+      - name: Release and publish using lerna with conventional commits
+        env:
+            NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+        run: |
+            git config --global user.name 'Oleh Pratsko'
+            git config --global user.email 'olehpratsko@gmail.com'
+            npx lerna publish --conventional-commits --yes

@@ -1,0 +1,17 @@
+{
+  "name": "eslint-config-pratsko-monorepo",
+  "version": "1.0.0",
+  "description": "Eslint rule sets used for my personal and clients' projects",
+  "main": "index.js",
+  "private": true,
+  "author": "Oleh Pratsko",
+  "license": "MIT",
+  "workspaces": [
+    "packages/base",
+    "packages/react"
+  ],
+  "devDependencies": {
+    "eslint-config-pratsko": "./packages/base",
+    "lerna": "^7.0.0"
+  }
+}
